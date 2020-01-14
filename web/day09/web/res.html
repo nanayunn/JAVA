@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="EUC-KR">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* PC 용이다! */
+		@media screen and (max-width:1280px) {
+			#page {
+				width: 800px;
+				height: 0 auto;
+				padding: 5px;
+				border: 1px solid red;
+			}
+
+			section {
+				width: 790px;
+				height: 300px;
+				background: gray;
+			}
+
+			header {
+				width: 790px;
+				height: 150px;
+				background: blue;
+
+			}
+
+			#Left_aside {
+				width: 500px;
+				height: 300px;
+				background: pink;
+				float: left;
+			}
+
+			#Right_aside {
+				width: 290px;
+				height: 300px;
+				background: green;
+				float: right;
+			}
+
+			footer {
+				width: 790px;
+				height: 50px;
+				background: black;
+
+			}
+		}
+		/* MOBILE 용이다! */
+		@media screen and (max-width:480px) {
+						#page {
+				width: 4100px;
+				height: 0 auto;
+				padding: 5px;
+				border: 1px solid red;
+			}
+
+			section {
+				width: 400px;
+				height: 100%;
+				background: gray;
+			}
+
+			header {
+				width: 400px;
+				height: 50px;
+				background: blue;
+
+			}
+
+			#Left_aside {
+				width: 400px;
+				height: 200px;
+				background: pink;
+				float: left;
+			}
+
+			#Right_aside {
+				width: 400px;
+				height: 200px;
+				background: green;
+				float: right;
+			}
+
+			footer {
+				width: 790px;
+				height: 50px;
+				background: black;
+
+			}
+		
+		}
+
+		/* TABLET 용이다! */
+		@media screen and (max-width:600px) {
+			#page {
+				width: 550px;
+				height: 0 auto;
+				padding: 5px;
+				border: 1px solid blue;
+			}
+
+			section {
+				width: 540px;
+				height: 300px;
+				background: gray;
+			}
+
+			header {
+				width: 540px;
+				height: 150px;
+				background: gray;
+
+			}
+
+			#Left_aside {
+				width: 400px;
+				height: 300px;
+				background: pink;
+				float: left;
+			}
+
+			#Right_aside {
+				width: 140px;
+				height: 300px;
+				background: green;
+				float: right;
+			}
+
+			footer {
+				width: 540px;
+				height: 50px;
+				background: black;
+
+			}
+		}
+
+	</style>
+	<script>
+		$(document).ready(function () {
+		});
+	</script>
+</head>
+
+<body>
+	<div id="page">
+		<header></header>
+		<section>
+			<aside id="Left_aside"></aside>
+			<aside id="Right_aside"></aside>
+		</section>
+		<footer></footer>
+	</div>
+</body>
+
+</html>

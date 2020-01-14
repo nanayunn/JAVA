@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+var num = 
+	parseInt(Math.random()*100 +1);	
+	console.log(num);
+var nguess = 0;
+var nsuc = 0;
+function gus(){
+	var result="";
+	var number = parseInt(document.getElementById("user").value);
+	nguess++;
+	if (number == num) {
+		result = "아니 어떻게 맞춘거지!"
+		nsuc++;
+		num = 
+	parseInt(Math.random()*100 +1);	
+
+	}else if(number > num){
+		result = "좀만 내려봐.."
+	} else {
+		result = "좀만 올려봐.."
+	}
+
+		document.getElementById("result").value = result;
+		document.getElementById("gus").value = nguess;
+		document.getElementById("성공").value = nsuc;
+		return true;
+};
+</script>
+</head>
+<body>
+<h1>숫자 맞춰보기</h1>
+<form>
+숫자 : <input type = "text" id = "user" size = "8">
+<input type = "button" value = "확인" onclick="gus();"><br>
+추측 몇 번 했냐면:
+<input type = "text" id = "guess" size="4"><br>
+힌트:
+<input type = "text" id = "result" size = "18"><br>
+몇번 맞췄냐면:
+<input type = "text" id = "성공"	size = "5">
+
+</form>
+</body>
+</html>

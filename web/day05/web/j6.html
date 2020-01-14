@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div{
+	width:400px;
+	border:2px solid red;
+}
+img{
+	width:50px;
+}
+</style>
+<script>
+// Display Data ...
+var sts 
+	= [
+		{img:'11.jpg',id:'id01', name:'에낙', age:20},
+		{img:'22.jpg',id:'id02', name:'몽쉘', age:26},
+		{img:'33.jpg',id:'id03', name:'칙촉', age:22},
+		{img:'hi.jpg',id:'id04', name:'하리보', age:29},
+		{img:'images.jpg',id:'id05', name:'초코파이', age:25}
+];
+
+function getData(){
+	var tbody = 
+	document.querySelector('div> table> tbody');
+	var text = '';
+	for (var i in sts){
+		text +='<tr>';
+			text +='<td>';
+				text+='<img src = "img/'+sts[i].img+'">';
+			text += '<td>'+sts[i].id+'</td>';
+			text += '<td>'+sts[i].name+'</td>';
+			text += '<td>'+sts[i].age+'</td>';
+			text +='</tr>';
+			
+		tbody.innerHTML = text;
+		};
+};
+</script>
+</head>
+<body>
+<h1>Student list</h1>
+<button onclick="getData();">GET DATA</button>
+<div>
+<table border:2px solid black>
+	<tr><thead>ID</thead><thead>NAME</thead><thead>AGE</thead>
+		<tbody>
+
+		</tbody>
+
+</tr>
+</table>
+</div>
+</body>
+</html>
+
+
+

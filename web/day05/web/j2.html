@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+function register(){
+	var id = 
+		document.querySelector('input[name = "id"]');
+	if(id.value =='' || id.value == null){
+			alert('ID is Mandatory Field.');
+			id.focus();
+			return;
+	};
+	var pwd = 
+		document.querySelector('input[name = "pwd"]');
+	if(pwd.value =='' || pwd.value == null){
+			alert('PWD is Mandatory Field.');
+			pwd.focus();
+			return;
+	};
+	var name = 
+		document.querySelector('input[name = "name"]');
+	if(name.value =='' || name.value == null){
+			alert('NAME is Mandatory Field.');
+			name.focus();
+			return;
+	};
+	var age = 
+		document.querySelector('input[name = "age"]');
+	if(age.value =='' || age.value == null){
+			alert('AGE is Mandatory Field.');
+			age.focus();
+			return;
+	};
+	var c = confirm('Are you Register Now.....');
+	if(c ==true){
+		document.regi.submit();
+	}else{
+
+	}
+	
+	};
+</script>
+</head>
+<body>
+<h1>Register</h1>
+<form name = "regi" action = "register" method="get"><br>
+ID<input type = "text" name = "id"><br>
+PWD<input type = "text" name = "pwd"><br>
+NAME<input type = "text" name = "name"><br>
+AGE<input type = "number" name = "age"><br>
+<input onclick = "register();" type ="button" value = "register">
+</form>
+</body>
+</html>

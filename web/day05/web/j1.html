@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+function getEle(){
+	var h1 = 
+		document.querySelector('#h1');
+		h1.innerHTML = "Hi!!!!"
+};
+	function getEle2(){
+		var hs =
+		document.querySelectorAll('div>h1');
+		for(var i= 0;i<hs.length;i++){
+			hs[i].innerHTML = 'OK!'+(i+1);
+			
+		};
+	};
+</script>
+</head>
+<body>
+	<div>
+<h1 id = "h1">Header1</h1>
+<h1 id = "h2">Header2</h1>
+<h1 id = "h3">Header3</h1>
+<button onclick="getEle();">Click1</button>
+<button onclick="getEle2();">Click2</button>
+</div>
+</body>
+</html>
+
+
+
+

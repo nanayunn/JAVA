@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+div{
+	width:500px;
+	border:2px solid red;
+}
+</style>
+<script>
+	function display(data){
+		var result ='';
+		$(data).each(function(index,item){
+			result += '<h3>';
+			result += item.name+' '+item.ko+' '+item.en+' '+item.ma;
+			result += '</h3>';
+			//alert(index+' '+item.name);
+		});
+		$('div').html(result);
+	};
+	function getData(){
+		var data = [
+			{name:'바밤바', ko:100,en:80,ma:79},
+			{name:'돼지바', ko:30,en:100,ma:93},
+			{name:'캔디바', ko:90,en:33,ma:86},
+			{name:'구구콘', ko:60,en:87,ma:69},
+			{name:'슈퍼콘', ko:80,en:55,ma:11}
+		];
+		display(data);
+	};
+$(document).ready(function(){
+	$('button').click(function(){
+		getData();
+	});
+});
+</script>
+</head>
+<body>
+<button>Click</button>
+<div></div>
+</body>
+</html>

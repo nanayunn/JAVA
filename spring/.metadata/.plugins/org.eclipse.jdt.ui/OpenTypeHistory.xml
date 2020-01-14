@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=day01/C:\/Program Files\/Java\/jdk1.8.0_231\/jre\/lib\/rt.jar&lt;java.lang(Object.class[Object" modifiers="33" timestamp="1571622167924"/>
+<typeInfo handle="=day01/src&lt;db02{Dao.java[Dao" modifiers="513" timestamp="1574925505931"/>
+<typeInfo handle="=day01/src&lt;db02{Biz.java[Biz" modifiers="513" timestamp="1574925631532"/>
+<typeInfo handle="=day01/src&lt;db02{IBiz.java[IBiz" modifiers="513" timestamp="1574926049511"/>
+<typeInfo handle="=day01/src&lt;db02{IDao.java[IDao" modifiers="513" timestamp="1574926975488"/>
+<typeInfo handle="=day02/src&lt;db{Dao.java[Dao" modifiers="513" timestamp="1574991026195"/>
+<typeInfo handle="=day02/src&lt;db{Biz.java[Biz" modifiers="513" timestamp="1574990977302"/>
+<typeInfo handle="=day031/src&lt;com.frame{Dao.java[Dao" modifiers="513" timestamp="1575260458860"/>
+<typeInfo handle="=day031/src&lt;com.frame{Service.java[Service" modifiers="513" timestamp="1575260556009"/>
+<typeInfo handle="=project/src&lt;com.frame{Service.java[Service" modifiers="513" timestamp="1576646672578"/>
+<typeInfo handle="=project/src&lt;com.frame{Dao.java[Dao" modifiers="513" timestamp="1576646672573"/>
+</typeInfoHistroy>

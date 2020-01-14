@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+*{
+	margin:0;padding:0;
+}
+a{
+	text-decoration:none;
+	color:black;
+
+}
+ul,ol{
+	list-style:none;
+}
+/*Outter CSS START********************************/
+#outter{
+	width:600px;
+	height:200px;
+	border:2px solid red;
+	margin:0 auto;
+	padding:5px;
+
+}
+#market{
+	text-align:center;
+}
+/*Outter CSS END********************************/
+/*maca CSS Start********************************/
+.maca{
+	width:110px;
+	height:150px;
+	border:1px solid pink;
+	float:left;
+	margin-right:5px;
+	
+}
+.maca>img{
+	width:100%;
+}
+.maca:hover{
+	border:2px solid blue;
+	opacity:0.8;
+}
+/*maca CSS END********************************/
+
+/*select_item CSS Start********************************/
+
+#select_item{
+	margin:0 auto;
+	width:300px;
+	border:2px solid blue;
+}
+/*select_item CSS END********************************/
+
+/*pay_area CSS START********************************/
+#pay_area{
+	margin:0 auto;
+	width:300px;
+	border:2px solid green;
+}
+/*pay_area CSS END********************************/
+#final{
+	margin:0 auto;
+	width:300px;
+	border:2px solid blue;
+}
+
+</style>
+<script>
+	//var mc = null;
+	//var cart = new Array();
+/*함수를 하나로 합칠 수 있다!?*/
+
+
+macarongs = {
+	mc:null,
+	cart:new Array(),
+	sum:0,
+	change:0,
+	
+
+	setUi:function(d){
+		if(d==0){
+		$('#pay_area').hide();
+		$('#select_item').hide();
+		}else{
+		$('#select_item>ul').empty();
+		$('#select_item>h3>span').html('');
+		$('#pay_area>#num').val(0);
+		$('#pay_area').show();
+		$('#select_item').show();
+		}
+		},
+
+	setTotal:function(){
+		var total = 0;
+		$(this.cart).each(function(idx,item){
+		total+=item.price;
+		});
+		this.sum = total;
+		$('#select_item>h3>span').text(this.sum);
+		},
+
+	sselect:function(idx){
+		var item = this.mc[idx];
+		this.cart.push(item);
+	
+		$('#select_item>ul').append('<li>'+
+		item.name+' '+item.price +'</li>'
+		);
+		console.log(this.cart);
+		this.setTotal();
+	},
+
+	payment: function(){
+		var num = $('#pay_area>input[type="number"]').val();
+		num = parseInt(num);
+		this.change = num - this.sum;
+		this.final();
+
+	},
+			final:function(){
+				this.setUi(0);
+				$('#final').append(this.change+'<br>');
+				$(this.cart).each(function(idx,item){
+					
+					var index = macarongs.mc.indexOf(item)
+					var macaron = macarongs.mc[index];
+					macaron.stock=macaron.stock-1;
+					
+					$('#final').append(
+						item.name+' '+item.price+'<br>'
+					);
+				});
+				this.cart = [];
+				display();
+				
+				},
+			// finalfinal:function(){
+
+			// 	$('#final').empty();
+			// }
+	};
+
+
+
+
+
+	function display(data){
+		//$('#outter').empty();
+		$(data).each(function(idx,item){
+			var result ='';
+			result +='<div onclick="macarongs.sselect('+idx+');" id = "'+idx+'" class = "maca">';
+			result += '<img src = "'+item.img+'">';
+			result += '<ul>';
+			result += '<li>'+item.name+'</li>';
+			result += '<li>'+item.price+'</li>';
+			result += '<li>'+item.stock+'</li>';
+			result += '</ul>';
+			result += '</div>';
+			$('#outter').append(result);
+		});
+		// function display(data){
+		// $(data).each(function(idx,item){
+		// 	var str = '';
+		// 	str +='<h3>';
+		// 	str += item.rank+' '+item.title;
+		// 	str += ' '+item.ud;
+		// 	str +='<h3>';
+		// 		$('div').append(str);
+				
+		// });
+	}
+	function getData(){
+		$.ajax({
+ 			url:'macaron',
+ 			success:function(data){
+				display(data);
+				macarongs.mc = data;
+ 			},
+ 			error:function(){}
+		});
+ 	};
+// 	macarongs.mc = [
+// 		{id:10,name:'Strawberry',price:1000, stock:5, img:'img/m1.jpg'},
+// 		{id:20,name:'Chocolate',price:1000, stock:4, img:'img/m2.jpg'},
+// 		{id:30,name:'Vanila',price:1000, stock:8, img:'img/m3.jpg'},
+// 		{id:40,name:'Lemon',price:1000, stock:3, img:'img/m4.jpg'},
+// 		{id:50,name:'Red Velvet',price:2000, stock:6, img:'img/m5.jpg'},
+// 	];
+// };
+
+// function getData(){
+// 		$.ajax({
+// 			url:'news',
+// 			success:function(data){
+// 				display(data);
+// 			},
+// 			error:function(){
+
+// 			}
+// 		})
+// 	};
+
+// function setTotal(){
+// 	var sum=0;
+// 	$(cart).each(function(idx,item){
+// 		sum+=item.price;
+// 	});
+// 	$('#select_item>h3>span').text(sum);
+// }
+// function sselect(idx){
+// 	var item = mc[idx];
+// 	cart.push(item);
+	
+// 	$('#select_item>ul').append('<li>'+
+// 		item.name+' '+item.price +'</li>'
+// 		);
+// 		console.log(cart);
+// 		setTotal();
+// };
+// function setUi(d){
+// 	if(d==0){
+// 		$('#pay_area').hide();
+// 		$('#select_item').hide();
+// 	}else{
+// 		$('#pay_area').show();
+// 		$('#select_item').show();
+// 	}
+// }
+$(document).ready(function(){
+	getData();
+	display();
+	macarongs.setUi(0);
+	$('#order_bt').click(function(){
+		macarongs.setUi(1);
+	});
+	$('#pay_area>input[type="button"]').click(function(){
+		if($('#pay_area>input[type="number"]').val() ==''){
+			alert('공백말고 숫자 넣으쇼..');
+		}else{
+			macarongs.payment();
+		}
+	});
+});
+</script>
+</head>
+<body>
+<h1 id ="market">Macarong yunn</h1>
+<button id ="order_bt" >Order</button>
+<div id = "outter">
+	<!-- <div onclick="sselect(0);" id = "0" class = "maca">
+		<img src = "img/m1.jpg">
+		<ul>
+			<li>Strawberry</li>
+			<li>1000</li>
+			<li>4</li>
+		</ul>
+	</div>
+	<div onclick="sselect(1);" id = "1" class = "maca"></div>
+	<div onclick="sselect(2);" id = "2" class = "maca"></div>
+	<div onclick="sselect(3);" id = "3" class = "maca"></div>
+	<div onclick="sselect(4);" id = "4" class = "maca"></div>
+	 -->
+</div>
+<div id = "pay_area">
+	<input type ="number" id = "num">
+	<input type = "button" value ="pay">
+</div>
+<div id ="select_item">
+	<h3>Total:<span>0</span>원</h3>
+	<ul>
+		
+	</ul>
+</div>
+<div id ="final">
+
+</div>
+<!-- <button onclick="macarongs.finalfinal();">결제 확인</button> -->
+</body>
+</html>

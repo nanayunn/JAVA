@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+var cars=[
+	{value: "k1",name:"K1"},
+	{value: "k2",name:"K2"},
+	{value: "k3",name:"K3"},
+	{value: "k4",name:"K4"},
+	{value: "k5",name:"K5"}
+];
+window.onload = function(){
+		var selec = 
+	document.querySelector('select[name = "car"]');
+	var text = '';
+	for (var i in cars){
+		text +='<option value='
+		+cars[i].value+'">'+cars[i].name
+		'</option>';
+			
+		selec.innerHTML = text;
+		};
+};
+</script>
+</head>
+<body>
+<form>
+	<select name ="car">
+<!--<option value = "k1">K1</option>
+<option value = "k2">K2</option>
+<option value = "k3">K3</option>
+<option value = "k4">K4</option>
+-->
+	</select>
+</form>
+</body>
+</html>

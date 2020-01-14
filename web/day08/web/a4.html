@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+
+</style>
+<script>
+	function display(data){
+		$(data).find('itemList').each(function(idx,item){
+			var date = 
+			$(item).find('collDate').text();
+			var nm = 
+			$(item).find('routeNm').text();
+			var spd = 
+			$(item).find('spd').text();
+			var result = date+' '+nm+' '+spd+'<br>';
+			$('div').append(result);
+		});
+	};
+	function getData(){
+	proxy="https://cors-anywhere.herokuapp.com/";
+		$.ajax({
+			url:
+			 `${proxy}http://openapi.gits.gg.go.kr/api/rest/getRoadLinkTrafficInfoList?serviceKey=1234567890&routeId=1030000031`,
+			success:function(data){
+				alert("success");
+				display(data);
+				console.log(data);
+			},
+			error:function(){
+				alert("fail");
+			}
+		});
+	};
+$(document).ready(function(){
+	getData();
+});
+</script>
+</head>
+<body>
+<h1>AJAX Open API Test(XML)</h1>
+<div></div>
+</body>
+</html>

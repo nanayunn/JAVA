@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+
+</style>
+<script>
+	function display(data){
+		$(data).each(function(idx,item){
+			var str = '';
+			str +='<h3>';
+			str += item.rank+' '+item.title;
+			str += ' '+item.ud;
+			str +='<h3>';
+				$('div').append(str);
+				
+		});
+	};
+	function getData(){
+		$.ajax({
+			url:'news',
+			success:function(data){
+				display(data);
+			},
+			error:function(){
+
+			}
+		})
+	};
+$(document).ready(function(){
+	getData();
+});
+</script>
+</head>
+<body>
+<h1>AJAX NEWS TEST</h1>
+<div>
+	
+</div>
+</body>
+</html>

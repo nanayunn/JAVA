@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+	var A = "";
+	function Rock(){
+		
+		var num = 
+	parseInt(Math.random()*3 +1);	
+		if(num == 1){
+			A = "가위";
+		}else if(num ==2){
+			A = "바위";
+		}else A = "보";
+		console.log(A);
+		
+		document.getElementById("B").value = A;
+	};
+
+
+
+</script>
+</head>
+<body>
+<form>
+<input type = "text" id = "B" size = "10">
+<input type = "button" value = "확인" onclick="Rock();"><br>
+</form>
+</body>
+</html>

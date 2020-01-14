@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Song+Myung&display=swap" rel="stylesheet">
+<title>Insert title here</title>
+<style>
+/*Global CSS Start**************************/
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:black;
+	
+}
+ul, ol{
+	list-style:none;
+	
+}
+/*Global CSS End***************************/
+header{
+	margin:0 auto;
+	width:100%;
+	height:150px;
+	background:#BDBDBD;
+	position:relative;
+	
+}
+/*Header CSS Start***************************/
+#top_nav{
+position:absolute;
+top:0;
+right:0;
+
+}
+#top_nav>li{
+float:left;
+
+}
+#top_nav>li>a{
+	font-size:0.8em;
+	font-weight:bold;
+	margin:0 5px;
+	float:left;
+}
+#top_nav>li>a:hover{
+	color:white;
+}
+header>hgroup{
+	position:absolute;
+	top:30px;
+	left:42%;
+	text-align:center;
+	font-family: 'Black Han Sans', sans-serif;
+}
+#main_nav>li{
+float:left;
+}
+#main_nav{
+position:absolute;
+bottom:0;
+left:100px;
+}
+#main_nav>li>a{
+	font-size:1em;
+	font-family: 'Gaegu', cursive;
+	font-weight:bold;
+	margin:0 50px;
+	float:left;
+}
+#main_nav>li>a:hover{
+	color:white;
+}
+/*Header CSS End***************************/
+
+/*Nav CSS Start***************************/
+nav{
+	margin:0 auto;
+	width:100%;
+	height:30px;
+	background:pink;
+	
+}
+/*Nav CSS End***************************/
+
+/*Section CSS Start***************************/
+section{
+	margin:0 auto;
+	width:100%;
+	height:350px;
+	background:yellow;
+	
+}
+section>aside{
+	float:left;
+	
+}
+#left_aside{
+	width:15%;
+	height:inherit;
+	background:#D4F4FA;
+	
+}
+#left_aside>form{
+		
+	 font-size:1em;
+	 font-family: 'Gaegu', cursive;
+	 text-align:center;
+	
+}
+#center_aside{
+	width:75%;
+	height:inherit;
+	background:#B2CCFF;
+	
+}
+div{	
+	text-align:center;
+}
+div>p{
+	font-size:2.5em;
+	font-family: 'Song Myung', serif;
+	color:#5D5D5D;
+}
+
+#right_aside{
+	width:10%;
+	height:inherit;
+	background:#DAD9FF;
+	
+}
+#right_aside>#right{
+	 font-size:1em;
+	 font-family: 'Gaegu', cursive;
+	 text-align:center;
+	 line-height:80px;
+	
+}
+/*Section CSS End***************************/
+
+/*Footer CSS Start***************************/
+footer{
+	margin:0 auto;
+	width:100%;
+	height:30px;
+	background:black;
+	
+}
+/*Footer CSS End***************************/
+
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<header>
+<ul id="top_nav">
+<li><a href="#">LOGIN</a></li>
+<li><a href="#">REGISTER</a></li>
+<li><a href="#">ABOUT US</a></li>
+</ul>
+<hgroup>
+
+<h1>오늘 뭐 먹지?</h1>
+<h3>~점심시간이다~</h3>
+
+</hgroup>
+<ul id="main_nav">
+<li><a href="#">메뉴추천</a></li>
+<li><a href="#">베스트 추천 메뉴</a></li>
+<li><a href="#">멋따라 맛따라</a></li>
+<li><a href="#">후식은 뭐야</a></li>
+</ul>
+</header>
+<nav><a href="index.html">HOME</a></nav>
+<section>
+<aside id="left_aside">
+<form>
+<br>당신의 취향은?<br><br>
+양식<input type = "checkbox" 
+			name = "taste"
+			value = "American"><br><br>
+한식<input type = "checkbox" 
+			name = "taste"
+			value = "Korean"><br><br>
+중식<input type = "checkbox" 
+			name = "taste"
+			value = "Chinese"><br><br>
+일식<input type = "checkbox" 
+			name = "taste"
+			value = "Japanese"><br><br><br>
+<input type = "submit" value="추천받기">
+</form></aside>
+<aside id="center_aside">
+<div><br><img src="zm.jpg" ><br><br>
+<p>"오늘.. 낮술 한 잔?"</p>
+</div>
+</aside>
+<aside id="right_aside">
+<ul id="right">
+<li><a href="#">지도</a></li>
+<li><a href="#">후기</a></li>
+<li><a href="#">사진</a></li>
+<li><a href="#">추천도</a></li>
+</ul>
+</aside>
+</section>
+<footer></footer>
+</body>
+</html>

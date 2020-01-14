@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>*^^*환영합니다! 정보입력을 완료해 주세요.*^^*</h1>
+<form>
+이름 : <input type = "text" name = "name"><br>
+나이 : <input type = "range" name = "age"><br>
+성별 : 
+<select name = "GENDER">
+	<option value = "남">남성</option>
+	<option value = "여">여성</option>
+</select><br>
+장애여부 : 
+대상<input type = "radio" name = "disabled" value = "Y"><br>
+비대상<input type = "radio" name = "disabled" value = "N"><br>
+생년월일 : <input type = "date" name = "birth-date"><br>
+연락처 : <input type = "tel" name="tel" 
+pattern = "[0-9]{3}-[0-9]{4}-[0-9]{4}" 
+title = "###-####-#### 맞춰주세요..."required><br>
+<input type = "submit" name = "제출">
+</form>
+</body>
+</html>

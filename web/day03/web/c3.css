@@ -1,0 +1,30 @@
+@charset "EUC-KR";
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Orbitron&display=swap');
+
+
+.human_list{
+	border-collapse: collapse;
+	width:300px;
+	height:150px;
+	border:1px solid blue;
+}
+.human_list td{
+	border:1px solid black;
+	font-family: 'Do Hyeon', sans-serif;
+}
+.human_list>tbody>tr:nth-child(2n){
+	background: pink;
+}
+.human_list>tbody>tr:nth-child(2n+1){
+	background: #E0FF8B;
+}
+.human_list>tbody>tr:hover{
+	background:black;
+	color:white;
+}
+.human_list>tbody>tr>td:nth-child(2){
+	text-align: center;
+}
+.human_list>tbody>tr>td:nth-child(3){
+	text-align: right;
+}

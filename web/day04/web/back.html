@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+/*Global CSS Start**************************/
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration:none;
+	color:black;
+	
+}
+ul, ol{
+	list-style:none;
+	
+}
+/*Global CSS End***************************/
+header{
+	margin:0 auto;
+	width:600px;
+	height:150px;
+	background:gray;
+	position:relative;
+	
+}
+/*Header CSS Start***************************/
+#top_nav{
+position:absolute;
+top:0;
+right:0;
+
+}
+#top_nav>li{
+float:left;
+
+}
+#top_nav>li>a{
+	font-size:0.8em;
+	font-weight:bold;
+	margin:0 5px;
+	float:left;
+}
+#top_nav>li>a:hover{
+	color:white;
+}
+header>hgroup{
+	position:absolute;
+	top:30px;
+	left:130px;
+	text-align:center;
+}
+#main_nav>li{
+float:left;
+}
+#main_nav{
+position:absolute;
+bottom:0;
+left:100px;
+}
+#main_nav>li>a{
+	font-size:1.5em;
+	font-weight:bold;
+	margin:0 10px;
+	float:left;
+}
+#main_nav>li>a:hover{
+	color:white;
+}
+/*Header CSS End***************************/
+
+/*Nav CSS Start***************************/
+nav{
+	margin:0 auto;
+	width:600px;
+	height:30px;
+	background:pink;
+	
+}
+/*Nav CSS End***************************/
+
+/*Section CSS Start***************************/
+section{
+	margin:0 auto;
+	width:600px;
+	height:350px;
+	background:yellow;
+}
+section>aside{
+	float:left;
+	
+}
+#left_aside{
+	width:100px;
+	height:inherit;
+	background:blue;
+	
+}
+#center_aside{
+	width:400px;
+	height:inherit;
+	background:white;
+	
+}
+#right_aside{
+	width:100px;
+	height:inherit;
+	background:red;
+	
+}
+/*Section CSS End***************************/
+
+/*Footer CSS Start***************************/
+footer{
+	margin:0 auto;
+	width:600px;
+	height:30px;
+	background:black;
+	
+}
+/*Footer CSS End***************************/
+
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<header>
+<ul id="top_nav">
+<li><a href="#">LOGIN</a></li>
+<li><a href="#">REGISTER</a></li>
+<li><a href="#">ABOUT US</a></li>
+</ul>
+<hgroup>
+<h1>SmALL</h1>
+<h3>Pant& Shirts</h3>
+</hgroup>
+<ul id="main_nav">
+<li><a href="#">Pants</a></li>
+<li><a href="#">Shirts</a></li>
+
+</ul>
+</header>
+<nav><a href="index.html">HOME</a></nav>
+<section>
+<aside id="left_aside"></aside>
+<aside id="center_aside"></aside>
+<aside id="right_aside"></aside>
+</section>
+<footer></footer>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="header"/>
+			<item value="pj"/>
+			<item value="project"/>
+			<item value="pj_cart"/>
+			<item value="Semi_Project"/>
+			<item value="E-commerce_Project"/>
+			<item value="ecommerce"/>
+			<item value="day044"/>
+			<item value="day032"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="header"/>
+			<item value="pj"/>
+			<item value="project"/>
+			<item value="pj_cart"/>
+			<item value="Semi_Project"/>
+			<item value="E-commerce_Project"/>
+			<item value="ecommerce"/>
+			<item value="day044"/>
+			<item value="day032"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

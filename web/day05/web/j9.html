@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+	window.onload = function(){
+		var h1 = document.querySelector('h1');
+		var t = function(){
+			var d = new Date();
+			
+			h1.innerHTML = d.toString();
+		};
+		setInterval(t,1000);
+
+	};
+	// 	setInterval(function(){
+	// 		var d = new Date();
+	// 		d.
+	// 		h1.innerHTML = d.toString();
+	// 	},100);
+
+	// };
+	// function a(){
+	// 	function aa(i){
+	// 		return i*1000;
+	// 	};
+	// 	return aa(10);
+	// };
+	// var result = a();
+// var num = 10;
+
+// function a(){
+// 	var num = 5;
+// 	return this.num * 100;
+// }
+
+// var result = a();
+// alert(result);
+</script>
+</head>
+<body>
+<h1></h1>
+</body>
+</html>

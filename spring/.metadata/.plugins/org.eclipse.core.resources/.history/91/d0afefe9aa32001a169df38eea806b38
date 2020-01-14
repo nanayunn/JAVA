@@ -1,0 +1,28 @@
+package hive;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import org.apache.hadoop.ipc.Server.Connection;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		
+		Class.forName("org.apache.hive.jdbc.HiveDriver");
+		Connection conn = DriverManager.getConnection
+
+		("jdbc:hive2:/1952.168.112.201:10000/default","hive","111111");
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery("SELECT * FROM HDI");
+		   while(rs.next()) {
+		     System.out.println(rs.getString(1));
+		   }
+		conn.close();
+		System.out.println("Success....");
+
+	}
+
+}

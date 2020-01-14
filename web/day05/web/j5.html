@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div{
+	width:300px;
+	border:2px solid red;
+}
+</style>
+<script>
+// Display Data ...
+var sts 
+	= [
+		{id:'id01', name:'에낙', age:20},
+		{id:'id02', name:'몽쉘', age:26},
+		{id:'id03', name:'칙촉', age:22},
+		{id:'id04', name:'하리보', age:29}
+];
+
+function getData(){
+	var div = 
+	document.querySelector('div');
+	var text = '';
+	for(var i = 0; i<sts.length;i++){
+		text += '<h3>';
+		text += sts[i].id + ' ' + sts[i].name +' '+ sts[i].age;
+		text += '<h3>';
+	}
+	div.innerHTML = text;
+}
+</script>
+</head>
+<body>
+<h1>Student list</h1>
+<button onclick="getData();">GET DATA</button>
+<div>
+
+</div>
+</body>
+</html>
+
+
+

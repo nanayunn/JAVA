@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+div{
+	width: 500px;
+	border:2px solid red;
+}
+img{
+	width:30px;
+}
+</style>
+<script>
+var ranks = null;
+function display(ranks){
+	var result='';
+	for(var i in ranks){
+		result += '<p>';
+			result += ranks[i].rank+' ';
+			result += ranks[i].title+' ';
+			if(ranks[i].updown =='up'){
+				result += '<img src="121.jpg">';
+			}else{
+				result+='<img src="212.jpg">';
+			}
+		
+			result +='</p>';
+	}
+	document.querySelector('div').innerHTML
+	=result;
+};
+function getData(){
+	
+
+ranks =[
+	{rank:5,title:'한일전',updown:'up'},
+	{rank:4,title:'델몬트',updown:'down'},
+	{rank:3,title:'33만원토스',updown:'up'},
+	{rank:2,title:'월요일',updown:'down'},
+	{rank:1,title:'오늘 치킨 줌',updown:'up'}
+];
+	alert('업데이트중...');
+	display(ranks);
+};
+setInterval(getData,3000);
+</script>
+</head>
+<body>
+<button onclick="getData();">Get Data</button>
+<div></div>
+</body>
+</html>

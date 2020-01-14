@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+
+</style>
+<script>
+$(document).ready(function(){
+	var Is = localStorage.getItem("data",);
+	if(Is == null ||Is ==''){
+		$('h1').text('로그인하세요');
+	}else{
+		$('h1').text('로그인 되었습니다.');
+	}
+	$('button').click(function(){
+		localStorage.setItem("data",1);
+	});
+	//var sd = sessionStorage.setItem('data','1');
+	//alert(Id+' '+sd);
+});
+</script>
+</head>
+<body>
+<h1>Web Storage Test</h1>
+<button>로그인 상태 유지</button>
+</body>
+</html>

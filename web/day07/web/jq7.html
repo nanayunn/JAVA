@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+img{
+	position:relative;
+	width:200px;
+	height:250px;
+	
+}
+table{
+	border:1px solid black;
+	text-align:center;
+	width:400px;
+	height:200px;
+	margin:0 auto;
+}
+</style>
+<script>
+	var data = [
+			{id:01, name:'Super Mario', price:3000, stock:5, img:'1.jpg'},
+			{id:02, name:'Pokemon', price:5000, stock:5, img:'2.jpg'},
+			{id:03, name:'Just Dance', price:4000, stock:5, img:'3.jpg'},
+			{id:04, name:'Overwatch', price:4500, stock:5, img:'4.jpg'},
+			{id:05, name:'Kirby', price:3600, stock:5, img:'5.jpg'}
+		];
+function display(data){
+		var result ='';
+		var indexs = '';
+		$(data).each(function(index,item){
+			result += '<button class = "b2" onclick ="sel( '+item.id +' );">';
+			result += '<img src ='+ item.img +'>';
+			result += '</button>';
+			indexs += '<tr>'+'<td>'+item.id+'</td>'
+					+'<td>'+item.name+'</td>'
+					+'<td>'+item.price+'</td>'
+					+'<td>'+item.stock+'</td>'
+					+'</tr>';
+			//alert(index+' '+item.name);
+		});
+		$('#b1').html(result);
+		$('tbody').html(indexs)
+	};
+	function getData(){
+		
+		display(data);
+	};
+$(document).ready(function(){
+	$('#b1').click(function(){
+		getData();
+	});
+});
+
+function sel(id){
+		var pr = '';
+		var n = 0;
+		for(var i in data ){
+			if(id==data[i].id){
+				pr += data[i].name+' '+data[i].price+'<BR>';
+						n++;
+					// if(n>data[i].stock){
+					// 	alert('수량 제한 입니다요!');
+					// 	return;
+					// }
+			};
+		};
+		$('#sele').append(pr);
+		console.log(pr);
+	
+		// pr +=item.price
+		// console.log(pr);
+		// alert('dd');
+	}
+// 	});
+// 	$('#sele').html(pr);
+// }
+</script>
+</head>
+<body>
+	<button id ="b1">!!닌텐도 스위치 게임 재고 떨이!!</button>
+<div></div>
+<table>
+	<tbody>
+
+	</tbody>
+</table>
+<br>
+<form id = "sell">
+	선택항목<div id = "sele" type="text" name ="selec" onclick="sel();"></div><br>
+	구매금액<input type="text" name ="total"><br>
+	충전금액<input type="text" name ="purchase"><br>
+	잔액확인<input type="text" name ="remain">
+</form>
+</body>
+</html>

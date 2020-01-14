@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+img{
+	position:relative;
+	
+}
+</style>
+<script>
+$(document).ready(function(){
+	$('button:eq(0)').click(function(){
+		$('img').show("slow",function(){
+			$(this).attr({'src':'hi.jpg'});
+		});
+	});
+	$('button:eq(1)').click(function(){
+		$('img').hide("slow",function(){
+			alert('hide ok');
+		});
+
+	});
+	$('button:eq(2)').click(function(){
+		$('img').animate(
+			{
+				left:'100px',
+				top:'100px',
+				width:'150px',
+				opacity:'0.5'
+				
+				}
+			
+			);
+	});
+	$('a').click(function(){
+		alert('ㅇ나윤이잔고8000원!')
+		location.href='http://naver.com'
+	});
+
+});
+</script>
+</head>
+<body>
+	<a href = "#">MOVE</a>
+<button>Show</button>
+<button>Hide</button>
+<button>Animate</button><br>
+<img src = "123.jpg">
+</body>
+</html>

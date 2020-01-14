@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+
+</style>
+<script>
+var exp=/^[a-zA-Z]{4,6}$/;
+
+var Check = {
+	checkData:'',
+	serverCheck:function(id){
+		$.ajax({
+		url:'check',
+		data:{id:id},
+		success:function(data){
+			Check.checkData = data;
+			if(Check.checkData == 0){
+				$('span').text('아이디 사용가능!!!');
+			}else{
+				$('span').text('형식은 맞는데 중복쓰..')
+			}
+
+		}
+	})
+	}
+};
+
+$(document).ready(function(){
+	$('#id').keyup(function(){
+		var id = $(this).val();
+		if(id.match(exp)){
+			//AJAX
+			Check.serverCheck(id);
+			
+			
+		}else{
+			$('span').text('아이디는 4~6자리 입니다.')
+		};
+	});
+
+});
+</script>
+</head>
+<body>
+<h1>AJAX ID Test</h1>
+<!-- 회원가입 시 아이디가 사용 가능한지 AJAX로 확인하기-->
+<form action = "register" method="GET">
+ID<input id = "id" type = "text" name = "id"><span></span><br>
+<input type = "submit" value = "REGISTER">
+</form>
+</body>
+</html>

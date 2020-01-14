@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<style>
+
+</style>
+<script>
+	var id_exp=/^[a-z]{6}$/;
+	function serverCheck(id){
+		if(id =='aaaaaa'){
+			$('#sid').text('아닛 중복이에요....');
+			$('input[name="id"]').val('');
+			$('input[name="id"]').focus();
+		}else{
+			$('#sid').text('됩니다!!!');
+			$('input[name="pwd"]').focus();
+		}
+	}
+
+	function checkId(id){
+		if(id.match(id_exp)){
+			$('#sid').text('됩니다!!!');
+			serverCheck(id);
+			//$('input[name="pwd"]').focus();
+		}else{
+			$('#sid').text('이거 안돼요..');
+		}
+	};
+$(document).ready(function(){
+	$('input[name = "id"]').keyup(function(){
+		var id = $(this).val();
+		checkId(id);
+	});
+	$('input[name = "pwd"]').blur(function(){
+		var pwd_exp=/^[a-z]{6}$/;
+		if($(this).val().match(pwd_exp)){
+			$('#spwd').text('아주 좋아요!!!');
+		}else{
+			$('#spwd').text('그러다 로그인 못해요..');
+			$(this).val('');
+			$(this).focus();
+			//$('input[name ="pwd"]').focus();
+		}
+	});
+	$('form>input:button').click(function(){
+	var c = confirm('회원등록 진행할까요?')
+		if(c == true){
+			$('form').attr({
+				action:'regi',
+				method:'get'
+							});
+		$('form').submit();
+					};
+	
+			});
+});
+</script>
+</head>
+<body>
+<h1>jQuery Register</h1>
+<form>
+	ID<input type = "text" name = "id"><span id = "sid"></span><br>
+	PWD<input type = "text" name = "pwd"><span id = "spwd"></span><br>
+	PHONE<input type = "text" name = "phone"><br>
+	EMAIL<input type = "text" name = "email"><br>
+	<input type = "button" value="REGISTER"><br>
+</form>
+</body>
+</html>

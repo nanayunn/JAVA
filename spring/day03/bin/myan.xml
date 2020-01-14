@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+
+	<context:component-scan base-package="db"></context:component-scan>
+
+
+<bean id="log" class="log.LogAdvice"/>
+
+	<aop:config>
+		<aop:pointcut expression="execution(* db..*Biz.*(..))" id="allPoint"/>
+		<aop:aspect ref = "log">
+			<aop:after-returning pointcut-ref="allPoint" method="afterReturn" returning="reObject"/>
+		
+		</aop:aspect>
+	</aop:config>
+	
+
+	
+
+	<aop:config>
+		<aop:pointcut expression="execution(* db..*Biz.*(..))" id="allPoint3"/>
+		<aop:aspect ref = "log">
+			<aop:around pointcut-ref="allPoint3" method="around" />
+		
+		</aop:aspect>
+	</aop:config>
+</beans>
+

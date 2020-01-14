@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+function register(){
+	var id = document.reg.id.value;
+	if(id =='' || id.length<6){
+		alert('Invalidate ID...');
+		document.reg.id.focus();
+		return;
+	};
+	var name = document.reg.name.value;
+	if(name =='' ){
+		alert('Invalidate NAME...');
+		document.reg.name.focus();
+		return;
+	};
+	var age = document.reg.age.value;
+	if(age =='' ){
+		alert('Invalidate AGE...');
+		document.reg.age.focus();
+		return;
+	};
+	var c= confirm('Are you register?');
+	if(c==true){
+		document.reg.submit();
+	}
+};
+</script>
+</head>
+<body>
+<h1>Register</h1>
+
+<form name = "reg"
+			action="register" method="GET">
+	ID<input type = "text" name = "id"><br>
+	NAME<input type = "text" name = "name"><br>
+	AGE<input type = "number" name = "age"><br>
+	<input type = "button" value ="REGISTER"
+	onclick = "register();">
+</form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+[2019-12-11 14:55:53.132] [exthost] [info] extension host started
+[2019-12-11 14:55:53.665] [exthost] [info] extension host started
+[2019-12-11 14:55:53.693] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:55:53.693] [exthost] [info] ExtensionService#loadCommonJSModule C:\eclipse\plugins\pack.core.win_3.6.0.201910290238\HookyQR.beautify-1.4.11\extension
+[2019-12-11 14:55:53.782] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:55:53.782] [exthost] [info] ExtensionService#loadCommonJSModule C:\eclipse\plugins\pack.core.win_3.6.0.201910290238\christian-kohler.path-intellisense-1.4.2\out\src\extension
+[2019-12-11 14:55:53.803] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:55:53.803] [exthost] [info] ExtensionService#loadCommonJSModule C:\eclipse\plugins\pack.core.win_3.6.0.201910290238\dbaeumer.vscode-eslint-1.9.0\client\out\extension
+[2019-12-11 14:55:53.851] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:55:53.851] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\debug-auto-launch\dist\extension
+[2019-12-11 14:55:53.856] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:55:53.856] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\emmet\dist\extension
+[2019-12-11 14:55:53.877] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:55:53.877] [exthost] [info] ExtensionService#loadCommonJSModule C:\eclipse\plugins\pack.core.win_3.6.0.201910290238\formulahendry.auto-close-tag-0.5.6\out\src\extension
+[2019-12-11 14:55:53.879] [exthost] [info] ExtensionService#_doActivateExtension vscode.grunt {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:55:53.879] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\grunt\dist\main
+[2019-12-11 14:55:53.884] [exthost] [info] ExtensionService#_doActivateExtension vscode.gulp {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:55:53.884] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\gulp\dist\main
+[2019-12-11 14:55:53.889] [exthost] [info] ExtensionService#_doActivateExtension vscode.jake {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:55:53.889] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\jake\dist\main
+[2019-12-11 14:55:53.894] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:55:53.894] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\npm\dist\main
+[2019-12-11 14:55:53.917] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:55:53.917] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\typescript-language-features\dist\extension
+[2019-12-11 14:55:53.992] [exthost] [info] eager extensions activated
+[2019-12-11 14:56:11.240] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-12-11 14:56:11.240] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\configuration-editing\dist\extension
+[2019-12-11 14:56:11.335] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-12-11 14:56:11.336] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\json-language-features\client\dist\jsonMain
+[2019-12-11 14:56:14.824] [exthost] [info] extension host started
+[2019-12-11 14:56:14.850] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:56:14.850] [exthost] [info] ExtensionService#loadCommonJSModule C:\eclipse\plugins\pack.core.win_3.6.0.201910290238\HookyQR.beautify-1.4.11\extension
+[2019-12-11 14:56:14.907] [exthost] [info] ExtensionService#_doActivateExtension christian-kohler.path-intellisense {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:56:14.907] [exthost] [info] ExtensionService#loadCommonJSModule C:\eclipse\plugins\pack.core.win_3.6.0.201910290238\christian-kohler.path-intellisense-1.4.2\out\src\extension
+[2019-12-11 14:56:14.922] [exthost] [info] ExtensionService#_doActivateExtension dbaeumer.vscode-eslint {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:56:14.922] [exthost] [info] ExtensionService#loadCommonJSModule C:\eclipse\plugins\pack.core.win_3.6.0.201910290238\dbaeumer.vscode-eslint-1.9.0\client\out\extension
+[2019-12-11 14:56:14.930] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:56:14.930] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\debug-auto-launch\dist\extension
+[2019-12-11 14:56:14.934] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:56:14.934] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\emmet\dist\extension
+[2019-12-11 14:56:14.939] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"activationEvent":"*"}
+[2019-12-11 14:56:14.939] [exthost] [info] ExtensionService#loadCommonJSModule C:\eclipse\plugins\pack.core.win_3.6.0.201910290238\formulahendry.auto-close-tag-0.5.6\out\src\extension
+[2019-12-11 14:56:14.940] [exthost] [info] ExtensionService#_doActivateExtension vscode.html-language-features {"startup":false,"activationEvent":"onLanguage:html"}
+[2019-12-11 14:56:14.940] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\html-language-features\client\dist\htmlMain
+[2019-12-11 14:56:15.134] [exthost] [info] ExtensionService#_doActivateExtension mkaufman.HTMLHint {"startup":false,"activationEvent":"onLanguage:html"}
+[2019-12-11 14:56:15.134] [exthost] [info] ExtensionService#loadCommonJSModule C:\eclipse\plugins\pack.core.win_3.6.0.201910290238\mkaufman.HTMLHint-0.6.0\out\extension
+[2019-12-11 14:56:15.546] [exthost] [info] ExtensionService#_doActivateExtension vscode.grunt {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:56:15.546] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\grunt\dist\main
+[2019-12-11 14:56:15.548] [exthost] [info] ExtensionService#_doActivateExtension vscode.gulp {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:56:15.548] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\gulp\dist\main
+[2019-12-11 14:56:15.551] [exthost] [info] ExtensionService#_doActivateExtension vscode.jake {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:56:15.551] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\jake\dist\main
+[2019-12-11 14:56:15.553] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:56:15.553] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\npm\dist\main
+[2019-12-11 14:56:15.558] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onCommand:workbench.action.tasks.runTask"}
+[2019-12-11 14:56:15.558] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\typescript-language-features\dist\extension
+[2019-12-11 14:56:15.572] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-12-11 14:56:15.572] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\configuration-editing\dist\extension
+[2019-12-11 14:56:15.581] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-12-11 14:56:15.581] [exthost] [info] ExtensionService#loadCommonJSModule c:\eclipse\plugins\com.genuitec.eclipse.code.engine.app.win32.x86_64_3.6.0.201910290238\engine\resources\app\extensions\json-language-features\client\dist\jsonMain
+[2019-12-11 14:56:15.666] [exthost] [info] eager extensions activated

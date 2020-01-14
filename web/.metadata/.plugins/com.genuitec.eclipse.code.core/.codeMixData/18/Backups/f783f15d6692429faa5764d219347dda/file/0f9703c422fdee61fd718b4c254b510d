@@ -1,0 +1,42 @@
+file:///c%3A/web/day05/web/j10.html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+ 
+</style>
+<script>
+	/*상품 목록*/
+var sts 
+	= [
+		{img:'A1.jpg',id:'01', name:'튼튼 멜빵치마', price:32000},
+		{img:'A2.jpg',id:'02', name:'따끈 떡볶이코트', price:44000},
+		{img:'A3.jpg',id:'03', name:'펄럭 롱스커트', price:18000},
+		{img:'A4.jpg',id:'04', name:'낙낙 후리스',price:25000},
+];
+/*선택 항목 불러오기*/
+function getData(){
+	var tbody = 
+	document.querySelector('div> table> tbody');
+	var text = '';
+	for (var i in sts){
+		text +='<tr>';
+			text +='<td>';
+				text+='<img src = "img/'+sts[i].img+'">';
+			text += '<td>'+sts[i].id+'</td>';
+			text += '<td>'+sts[i].name+'</td>';
+			text += '<td>'+sts[i].age+'</td>';
+			text +='</tr>';
+			
+		tbody.innerHTML = text;
+		};
+};
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

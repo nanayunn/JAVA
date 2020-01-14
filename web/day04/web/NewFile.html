@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+
+function calc(a){
+	 var num =
+			document.querySelector('num').value;
+			a.value +=a;
+}
+function calculate() {
+    var num = document.getElementById('num');
+    var result = eval(num.value); // 식을 계산하고 result 변수에 저장합니다.
+		document.getElementById('result').value = result;
+
+
+};
+
+</script>
+</head>
+<body>
+<input type = "text" id = "num"><br>
+<input type="text" id="result"><br>
+<button onclick = "calc('1');">1</button>
+<button onclick = "calc('2');">2</button>
+<button onclick = "calc('3');">3</button><br>
+<button onclick = "calc('4');">4</button>
+<button onclick = "calc('5');">5</button>
+<button onclick = "calc('6');">6</button><br>
+<button onclick = "calc('7');">7</button>
+<button onclick = "calc('8');">8</button>
+<button onclick = "calc('9');">9</button><br>
+<button onclick = "calc('+');">+</button>
+<button onclick = "calc('0');">0</button>
+<button onclick = "calc('-');">-</button><br>
+<button onclick = "calc('*');">*</button>
+<button onclick = "calc('%');">%</button>
+<button onclick = "calculation();">=</button>
+
+</body>
+</html>

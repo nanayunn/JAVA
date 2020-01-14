@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+	var id_exp = /^[a-z0-9]{4,20}$/;
+	var pwd_exp = /^[a-z0-9_]{6,20}$/;
+	var phone_exp = /^\d{3}-\d{3,4}-\d{4}$/;
+	var email_exp = 
+	 /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+function register(){
+var id = document.register_form.id.value;
+if(!id.match(id_exp)){
+	alert('4-20자리로만...제발..');
+	document.register_form.id.focus();
+	return;
+}
+// if(id.match(id_exp)){
+// 	alert('ok!');
+// }else{
+// 	alert('아이디는 4-20자리로만');
+// }
+var pwd = document.register_form.pwd.value;
+if(!id.match(id_exp)){
+	alert('4-20자리로만...제발..');
+	document.register_form.id.focus();
+	return;
+}
+var phone = document.register_form.phone.value;
+if(!id.match(id_exp)){
+	alert('비밀번호 길이 6자리만 좀 넘겨주실래요..?');
+	document.register_form.id.focus();
+	return;
+}
+var email = document.register_form.email.value;
+if(!id.match(id_exp)){
+	alert('정상적인 이메일 써주세요..');
+	document.register_form.id.focus();
+	return;
+}
+
+var c = confirm('Are you Register?')
+	if (c==true){
+		document.register_form.submit();
+		}
+};
+</script>
+</head>
+<body>
+<form name = "register_form" action="regi" method = "GET">
+	ID<input type = "text" name = "id" required><br>
+	PWD<input type = "text" name = "pwd" required><br>
+	PHONE<input type = "text" name = "phone" required><br>
+	EMAIL<input type = "text" name = "email" required><br>
+	<input onclick = "register();" type = "button"
+	value="REGISTER"><br>
+</form>
+</body>
+</html>

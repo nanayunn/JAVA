@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+#cart{
+	width:500px;
+	height:200px;
+	border:2px solid red;
+}
+#cart2{
+	width:500px;
+	height:200px;
+	border:2px solid blue;
+}
+img{
+	width:150px;
+}
+</style>
+<script>
+	function dragstart(event){
+		event.dataTransfer.effectAllowed = 'move';
+		event.dataTransfer.setData('item',event.target.id);
+	};
+	function drop(event){
+	event.preventDefault();
+	var src = event.dataTransfer.getData('item');
+	event.target.appendChild(
+		document.getElementById(src));
+	
+};
+	function dragover(event){
+		event.preventDefault();
+	};
+$(document).ready(function(){
+});
+</script>
+</head>
+<body>
+<h1>Drag&Drop</h1>
+<div id = "cart" ondrop="drop(event);" ondragover="dragover(event);"></div>
+<div id = "cart2" ondrop="drop(event);" ondragover="dragover(event);"></div>
+<br>
+<img id = "m1" src = "m1.jpg" ondragstart="dragstart(event);" draggable="true">
+<img id = "m2" src = "m2.jpg" ondragstart="dragstart(event);" draggable="true">
+<img id = "m3" src = "m4.jpg" ondragstart="dragstart(event);" draggable="true">
+</body>
+</html>

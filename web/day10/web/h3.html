@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+
+</style>
+<script>
+$(document).ready(function(){
+		if(typeof(EventSource) != 'undefined') {
+			var source = 
+			new EventSource('test');
+			source.onmessage = function(event){
+				var is = eval(event.data);
+				for(var i in is){
+					result = is[i].title+' '+
+					is[i].lat+' '+
+					is[i].lng;
+					$('div').append(result);
+				}
+				//alert(typeOf(event.data));
+				$('h2').text(event.data);
+			};
+		}else{
+			alert('Not sse');
+		}
+
+});
+</script>
+</head>
+<body>
+<h1>Server Sent Event</h1>
+<h2></h2>
+<div></div>
+</body>
+</html>

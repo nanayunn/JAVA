@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+function calc(){
+	var num1 =
+			document.querySelector('#num1').value;
+			if(num1 == '' || isNaN(num1)){
+			document.querySelector('h2').innnerHTML
+			='Input Num1...';
+			return;
+			};
+	var num2 =
+			document.querySelector('#num2').value;
+			if(num2 == '' || isNaN(num2)){
+			document.querySelector('h2').innnerHTML
+			='Input Num2...';
+			return;
+			};
+		var result = parseInt(num1)+parseInt(num2);
+		 document.querySelector('#result').value
+		 =result ;
+		};
+</script>
+</head>
+<body>
+Num1<input type = "number" id = "num1" ><br>
+Num2<input type = "number" id = "num2" ><br>
+Result<input type="number" id = "result" readonly><br>
+
+<button onclick = "calc();">Calc</button>
+<h2>Num1과 Num2에 숫자 입력해주세yo</h2>
+</body>
+</html>

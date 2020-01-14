@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<style>
+
+</style>
+<script>
+	function display(data){
+		$('h3').text(data);
+	};
+	function getData(){
+		$.ajax({
+			url:'time',//서버의 프로그램 이름이 들어감..
+			success:function(data){
+				display(data);
+			},
+			error:function(){}
+		});
+		
+	};
+	
+$(document).ready(function(){
+	getData();
+	setInterval(getData,1000);
+});
+</script>
+</head>
+<body>
+<h1>AJAX Test</h1>
+<h3>Time....</h3>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style>
+
+</style>
+<script>
+	var s1 =
+setInterval(function(){
+	var hh1 = document.querySelector('#hh1');
+	hh1.innerHTML += hh1.innerHTML+'*';
+},600);
+	var s2 =
+setInterval(function(){
+	var hh2 = document.querySelector('#hh2');
+	hh2.innerHTML += hh2.innerHTML+'*';
+},400);
+	var s3 =
+setInterval(function(){
+	var hh3 = document.querySelector('#hh3');
+	hh3.innerHTML += hh3.innerHTML+'*';
+},800);
+setTimeout(function(){
+	clearInterval(s1);
+	clearInterval(s2);
+	clearInterval(s3);
+},3000);
+</script>
+</head>
+<body>
+<h1>Main Page</h1>
+<h2 id ="hh1"></h2>
+<h2 id ="hh2"></h2>
+<h2 id ="hh3"></h2>
+
+</body>
+</html>
